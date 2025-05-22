@@ -13,10 +13,10 @@ export class AppComponent {
   articles = [
     {title: "a", link: "b"}
   ]
-  addArticle(titleH: HTMLInputElement, link: HTMLInputElement): boolean {
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
 
-    console.log(`Adding article title: ${titleH.value} and link: ${link.value}`);
-
+    console.log(`Adding article title: ${title.value} and link: ${link.value}`);
+    this.articles.push({title: title.value, link: link.value})
   return false;
   }
 }
