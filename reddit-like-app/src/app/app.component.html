@@ -13,8 +13,9 @@
       Submit link
     </button>
   </form>
-      @for (article of articles; track article) {
-  <app-article [title]=article.title [link]="article.link"></app-article>
+      @for (article of sortedArticles(); track article) {
+  <app-article [article]="article"></app-article>
     }
+     <!-- <app-article *ngFor="let art of articles" [article]="art"></app-article>-->
 
 </div>
