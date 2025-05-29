@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="mt-4 p-5 bg-secondary text-white rounded">
+  <form #articleForm class="mt-4 p-5 bg-secondary text-white rounded">
       <h3 class="display-4">Add a Link</h3>
       <div class="form-group">
         <label for="title">Title:</label>
@@ -9,7 +9,7 @@
         <label for="link">Link:</label>
         <input id="link" #newlink class="form-control">
       </div>
-    <button (click)="addArticle(newtitle, newlink)" class="btn btn-primary">
+    <button (click)="addArticle(articleForm, newtitle, newlink)" class="btn btn-primary">
       Submit link
     </button>
   </form>

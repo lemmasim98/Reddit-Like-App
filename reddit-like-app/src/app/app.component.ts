@@ -19,9 +19,10 @@ export class AppComponent {
     ];
   }
 
-addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+addArticle(form: HTMLFormElement, title: HTMLInputElement, link: HTMLInputElement): boolean {
   console.log(`Adding article title: ${title.value} and link: ${link.value}`);
   this.articles.push(new Article(title.value, link.value, 0));
+  form.reset();
   return false;
 }
 

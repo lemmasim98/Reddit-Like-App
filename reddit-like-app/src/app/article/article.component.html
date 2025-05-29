@@ -5,7 +5,7 @@
   <a [href]="article.link" target="_blank" rel="noopener noreferrer">
     {{ article.title }}
   </a>
-    <span *ngIf="article.domain()" class="badge rounded-pill bg-info text-dark ms-2">
+    <span ngIf="article.domain()" class="badge rounded-pill bg-info text-dark ms-2">
     {{ article.domain() }}
   </span>
   </div>
